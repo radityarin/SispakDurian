@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Sistem Pakar Durian</string>
+    <string name="sistem_pakar_ndiagnosa_pohon_durian">Sistem Pakar\nDiagnosa Pohon Durian</string>
+    <string name="diagnosa_sekarang">Diagnosa Sekarang</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="diagnosa">Diagnosa</string>
+    <string name="beranda">Beranda</string>
+    <string name="diagnosa_hama">Diagnosa Hama</string>
+    <string name="diagnosa_penyakit">Diagnosa Penyakit</string>
+    <string name="riwayat_diagnosa">Riwayat Diagnosa</string>
+    <string name="informasi_hama_durian">Informasi Hama Durian</string>
+    <string name="informasi_penyakit_durian">Informasi Penyakit Durian</string>
+    <string name="back">Back</string>
+    <string name="pilih_gejala_penyakit">Pilih Gejala Penyakit</string>
+    <string name="processing">Processing...</string>
+    <string name="hasil_diagnosa_s">Hasil Diagnosa %s</string>
+    <string name="gejala_yang_dipilih">Gejala yang dipilih :</string>
+    <string name="nilai_keyakinan">Nilai Keyakinan :</string>
+    <string name="cara_penanganan">Cara Penanganan:</string>
+    <string name="oops_anda_belum_memiliki_riwayat_diagnosa">Oops! Anda belum memiliki riwayat diagnosa</string>
+    <string name="reset">Reset</string>
+    <string name="selesai">Selesai</string>
+    <string name="clear">Clear</string>
+    <string name="tidak">Tidak</string>
+    <string name="hapus">Hapus</string>
+    <string name="apakah_kamu_yakin_ingin_menghapus_riwayat_mu">Apakah kamu yakin ingin menghapus riwayat mu?</string>
+</resources>

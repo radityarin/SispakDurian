@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.kelompoksatu.sispakdurian.util.Utils"/>
+        <variable
+            name="diagnosis"
+            type="com.kelompoksatu.sispakdurian.data.model.Diagnosis" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            style="@style/headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/layout_margin2"
+            android:layout_marginVertical="@dimen/layout_margin2"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:text="@{String.format(@string/hasil_diagnosa_s,diagnosis.type)}"
+            android:textStyle="bold"
+            tools:text="Hasil Diagnosa Hama" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/layout_margin2"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin2">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/gejala_yang_dipilih"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{diagnosis.inputSymptomps.toString()}"
+                                tools:text="G1,G2,G3" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/layout_margin2"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin2">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{diagnosis.timestamps}"
+                                android:textColor="@color/text_gray"
+                                tools:text="02/Oct/2020" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/headline6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_margin3"
+                                android:text="@{diagnosis.classificationResult}"
+                                android:textStyle="bold"
+                                tools:text="Kutu Loncat" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{Utils.INSTANCE.printList(diagnosis.inputSymptomps)}"
+                                tools:text="G1,G2,G3" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_margin3"
+                                android:text="@string/cara_penanganan" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{diagnosis.classificationResult}"
+                                tools:text="Dijilat dicelupin" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_margin2">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/subtitle1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nilai_keyakinan"
+                                    android:textStyle="bold" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/subtitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@{String.valueOf(diagnosis.cf) + ` %`}"
+                                    android:textColor="@color/primary"
+                                    android:textStyle="bold"
+                                    tools:text="74%" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mbSelesai"
+                    style="@style/ButtonPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/layout_margin2"
+                    android:layout_marginVertical="@dimen/layout_margin"
+                    android:text="@string/selesai" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

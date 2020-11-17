@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="diagnosis"
+            type="com.kelompoksatu.sispakdurian.data.model.Diagnosis" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mcvDiagnosisHama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/layout_margin2"
+        android:layout_marginTop="@dimen/layout_margin3"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_margin2">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/headline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{diagnosis.classificationResult}"
+                    android:textStyle="bold"
+                    tools:text="Kutu Loncat" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin3"
+                    android:textColor="@color/text_gray"
+                    android:text="Gejala yang dipilih : " />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{diagnosis.inputSymptomps.toString()}"
+                    android:textColor="@color/text_gray"
+                    tools:text="[G1,G2,G3]" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin3"
+                    android:textColor="@color/text_gray"
+                    android:text="Nilai Keyakinan :" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(diagnosis.cf) + ` %`}"
+                    android:textColor="@color/text_gray"
+                    tools:text="70.44 %" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_marginTop="@dimen/layout_margin3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_gray"
+                    android:text="Penanganan : " />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{diagnosis.classificationResult}"
+                    android:textColor="@color/text_gray"
+                    tools:text="Disiram dicelup" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/layout_margin2"
+                android:text="@{diagnosis.timestamps}"
+                tools:text="02/03/2020" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
