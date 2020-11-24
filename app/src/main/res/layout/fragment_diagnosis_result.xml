@@ -5,7 +5,8 @@
 
     <data>
 
-        <import type="com.kelompoksatu.sispakdurian.util.Utils"/>
+        <import type="com.kelompoksatu.sispakdurian.util.Utils" />
+
         <variable
             name="diagnosis"
             type="com.kelompoksatu.sispakdurian.data.model.Diagnosis" />
@@ -70,7 +71,7 @@
                                 style="@style/subtitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{diagnosis.inputSymptomps.toString()}"
+                                android:text="@{Utils.INSTANCE.printList(diagnosis.inputSymptomps)}"
                                 tools:text="G1,G2,G3" />
 
                         </LinearLayout>
@@ -82,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/layout_margin2"
-                    android:layout_marginTop="@dimen/layout_margin"
+                    android:layout_marginTop="@dimen/layout_margin2"
                     android:layout_marginBottom="@dimen/_8sdp"
                     android:clickable="true"
                     android:focusable="true"
@@ -117,31 +118,10 @@
                                 android:textStyle="bold"
                                 tools:text="Kutu Loncat" />
 
-                            <com.google.android.material.textview.MaterialTextView
-                                style="@style/subtitle1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@{Utils.INSTANCE.printList(diagnosis.inputSymptomps)}"
-                                tools:text="G1,G2,G3" />
-
-                            <com.google.android.material.textview.MaterialTextView
-                                style="@style/subtitle1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/layout_margin3"
-                                android:text="@string/cara_penanganan" />
-
-                            <com.google.android.material.textview.MaterialTextView
-                                style="@style/subtitle1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@{diagnosis.classificationResult}"
-                                tools:text="Dijilat dicelupin" />
-
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/layout_margin2">
+                                android:layout_marginTop="@dimen/layout_margin3">
 
                                 <com.google.android.material.textview.MaterialTextView
                                     style="@style/subtitle1"
@@ -156,10 +136,27 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
                                     android:text="@{String.valueOf(diagnosis.cf) + ` %`}"
-                                    android:textColor="@color/primary"
                                     android:textStyle="bold"
                                     tools:text="74%" />
                             </RelativeLayout>
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{Utils.INSTANCE.convertPercentageToInformation(diagnosis.cf)}"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/primary"
+                                tools:text="Mungkin" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{Utils.INSTANCE.getGejalaDanCaraPenanganan(diagnosis.classificationResult)}"
+                                tools:text="Gejala dan Cara Penanganan" />
+
 
                         </LinearLayout>
                     </RelativeLayout>
