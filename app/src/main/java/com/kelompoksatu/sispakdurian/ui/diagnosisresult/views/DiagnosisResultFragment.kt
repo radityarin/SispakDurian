@@ -34,7 +34,6 @@ class DiagnosisResultFragment : Fragment() {
         }
 
         Toast.makeText(context, "Result", Toast.LENGTH_SHORT).show()
-        Toast.makeText(context, "Result", Toast.LENGTH_SHORT).show()
     }
 
 }
