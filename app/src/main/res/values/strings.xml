@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Sistem Pakar Durian</string>
+    <string name="app_name">DurianAI</string>
     <string name="sistem_pakar_ndiagnosa_pohon_durian">Sistem Pakar\nDiagnosa Pohon Durian</string>
     <string name="diagnosa_sekarang">Diagnosa Sekarang</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="diagnosa">Diagnosa</string>
     <string name="beranda">Beranda</string>
@@ -26,4 +25,6 @@
     <string name="hapus">Hapus</string>
     <string name="apakah_kamu_yakin_ingin_menghapus_riwayat_mu">Apakah kamu yakin ingin menghapus riwayat mu?</string>
     <string name="gejala">Gejala</string>
+    <string name="kemungkinan_terbesar">Kemungkinan Terbesar</string>
+    <string name="kemungkinan_terkecil">Kemungkinan Terkecil</string>
 </resources>

@@ -2,6 +2,7 @@
 <layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="com.kelompoksatu.sispakdurian.util.Utils" />
 
         <variable
             name="diagnosis"
@@ -36,7 +37,7 @@
                     style="@style/headline6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{diagnosis.classificationResult}"
+                    android:text="@{diagnosis.classificationResultMax}"
                     android:textStyle="bold"
                     tools:text="Kutu Loncat" />
 
@@ -68,25 +69,18 @@
                     style="@style/subtitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{String.valueOf(diagnosis.cf) + ` %`}"
+                    android:text="@{String.valueOf(diagnosis.cfMax) + ` %`}"
                     android:textColor="@color/text_gray"
                     tools:text="70.44 %" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/subtitle1"
-                    android:layout_marginTop="@dimen/layout_margin3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@{Utils.INSTANCE.getGejalaDanCaraPenanganan(diagnosis.classificationResultMax)}"
                     android:textColor="@color/text_gray"
-                    android:text="Penanganan : " />
-
-                <com.google.android.material.textview.MaterialTextView
-                    style="@style/subtitle1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{diagnosis.classificationResult}"
-                    android:textColor="@color/text_gray"
-                    tools:text="Disiram dicelup" />
+                    android:maxLines="2"
+                    tools:text="Gejala dan Cara Penanganan" />
 
             </LinearLayout>
 

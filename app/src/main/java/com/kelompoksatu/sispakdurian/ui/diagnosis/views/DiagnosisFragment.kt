@@ -1,7 +1,9 @@
 package com.kelompoksatu.sispakdurian.ui.diagnosis.views
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -166,6 +168,8 @@ class DiagnosisFragment : Fragment() {
     private fun diagnose() {
         val usedSymtomps = symptompsAdapter.getUsedSymptomps()
         val certaintyFactor = symptompsAdapter.getCertaintyFactor()
+        Log.d(TAG, "diagnose: " + usedSymtomps)
+        Log.d(TAG, "diagnose: " + certaintyFactor)
         handler.postDelayed({
             when (args.type) {
                 HAMA -> {

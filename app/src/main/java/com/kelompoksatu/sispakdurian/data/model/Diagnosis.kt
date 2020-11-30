@@ -13,16 +13,22 @@ data class Diagnosis(
     @PrimaryKey
     @SerializedName("id_prediction")
     var idPrediction: String,
-    @SerializedName("timestamps")
-    var timestamps: String,
-    @SerializedName("cf")
-    var cf: Double,
-    @SerializedName("classification_result")
-    var classificationResult: String,
-    @SerializedName("posterior")
-    var posterior: Double,
+    @SerializedName("cf_max")
+    var cfMax: Double,
+    @SerializedName("cf_min")
+    var cfMin: Double,
+    @SerializedName("classification_result_max")
+    var classificationResultMax: String,
+    @SerializedName("classification_result_min")
+    var classificationResultMin: String,
     @SerializedName("input_symptomps")
     var inputSymptomps: List<String>,
+    @SerializedName("posterior_max")
+    var posteriorMax: Double,
+    @SerializedName("posterior_min")
+    var posteriorMin: Double,
+    @SerializedName("timestamps")
+    var timestamps: String,
     @SerializedName("type")
     var type: String
 ) : Parcelable

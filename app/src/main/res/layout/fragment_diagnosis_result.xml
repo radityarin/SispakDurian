@@ -105,17 +105,17 @@
                                 style="@style/subtitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{diagnosis.timestamps}"
-                                android:textColor="@color/text_gray"
-                                tools:text="02/Oct/2020" />
+                                android:textStyle="bold"
+                                android:text="@string/kemungkinan_terbesar"/>
 
                             <com.google.android.material.textview.MaterialTextView
                                 style="@style/headline6"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/layout_margin3"
-                                android:text="@{diagnosis.classificationResult}"
+                                android:text="@{diagnosis.classificationResultMax}"
                                 android:textStyle="bold"
+                                android:textColor="@color/primary"
                                 tools:text="Kutu Loncat" />
 
                             <RelativeLayout
@@ -135,7 +135,8 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentEnd="true"
-                                    android:text="@{String.valueOf(diagnosis.cf) + ` %`}"
+                                    android:textColor="@color/primary"
+                                    android:text="@{String.valueOf(diagnosis.cfMax) + ` %`}"
                                     android:textStyle="bold"
                                     tools:text="74%" />
                             </RelativeLayout>
@@ -145,7 +146,7 @@
                                 style="@style/subtitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{Utils.INSTANCE.convertPercentageToInformation(diagnosis.cf)}"
+                                android:text="@{Utils.INSTANCE.convertPercentageToInformation(diagnosis.cfMax)}"
                                 android:textAlignment="textEnd"
                                 android:textColor="@color/primary"
                                 tools:text="Mungkin" />
@@ -154,10 +155,86 @@
                                 style="@style/subtitle1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@{Utils.INSTANCE.getGejalaDanCaraPenanganan(diagnosis.classificationResult)}"
+                                android:text="@{Utils.INSTANCE.getGejalaDanCaraPenanganan(diagnosis.classificationResultMax)}"
                                 tools:text="Gejala dan Cara Penanganan" />
 
 
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/layout_margin2"
+                    android:layout_marginTop="@dimen/layout_margin2"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/layout_margin2">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="@string/kemungkinan_terkecil"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/headline6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_margin3"
+                                android:text="@{diagnosis.classificationResultMin}"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary"
+                                tools:text="Kutu Loncat" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/layout_margin3">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/subtitle1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nilai_keyakinan"
+                                    android:textStyle="bold" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/subtitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="@color/primary"
+                                    android:text="@{String.valueOf(diagnosis.cfMin) + ` %`}"
+                                    android:textStyle="bold"
+                                    tools:text="74%" />
+                            </RelativeLayout>
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/subtitle1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@{Utils.INSTANCE.convertPercentageToInformation(diagnosis.cfMin)}"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/primary"
+                                tools:text="Mungkin" />
                         </LinearLayout>
                     </RelativeLayout>
 

@@ -134,7 +134,7 @@ class SymptompsAdapter : RecyclerView.Adapter<SymtompViewHolder>() {
     }
 
     fun getUsedSymptomps(): List<String> {
-        return usedSymptomps
+        return usedSymptomps.distinct()
     }
 
 }

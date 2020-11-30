@@ -20,11 +20,12 @@
                 android:text="@string/beranda"
                 android:textStyle="bold" />
 
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/mcvDiagnosisHama"
                 android:layout_width="match_parent"
-                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:layout_height="@dimen/_60sdp"
+                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:layout_marginTop="@dimen/layout_margin"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:clickable="true"
@@ -35,6 +36,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="#F7FFEF"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
@@ -50,12 +52,6 @@
                             android:text="@string/diagnosa_hama"
                             android:textStyle="bold" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            style="@style/caption"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_baseline_arrow_forward_24" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -65,10 +61,10 @@
                 android:id="@+id/mcvDiagnosisPenyakit"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
+                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:layout_marginTop="@dimen/layout_margin3"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:clickable="true"
-                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="10dp"
@@ -76,6 +72,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:background="#FFEFEF"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
@@ -91,12 +88,6 @@
                             android:text="@string/diagnosa_penyakit"
                             android:textStyle="bold" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            style="@style/caption"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_baseline_arrow_forward_24" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -108,7 +99,7 @@
                 android:layout_height="@dimen/_60sdp"
                 android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:layout_marginTop="@dimen/layout_margin3"
-                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_18sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
@@ -132,12 +123,6 @@
                             android:text="@string/riwayat_diagnosa"
                             android:textStyle="bold" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
-                            style="@style/caption"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_baseline_arrow_forward_24" />
                     </LinearLayout>
                 </RelativeLayout>
 
@@ -147,12 +132,13 @@
                 android:id="@+id/mcvInformasiHamaDurian"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
+                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:layout_marginTop="@dimen/layout_margin3"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:clickable="true"
-                android:layout_marginHorizontal="@dimen/layout_margin2"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="@dimen/_10sdp">
 
@@ -188,12 +174,13 @@
                 android:id="@+id/mcvInformasiPenyakitDurian"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
-                android:layout_marginTop="@dimen/layout_margin3"
                 android:layout_marginHorizontal="@dimen/layout_margin2"
+                android:layout_marginTop="@dimen/layout_margin3"
                 android:layout_marginBottom="@dimen/_50sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="@dimen/_10sdp">
 
