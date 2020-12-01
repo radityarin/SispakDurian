@@ -45,7 +45,7 @@ object Utils {
             "jamur daun"-> penanganan = jamurDaun
             "busuk akar"-> penanganan = busukAkar
             "kanker batang" -> penanganan = kankerBatang
-            "jamus upas" -> penanganan = jamurUpas
+            "jamur upas" -> penanganan = jamurUpas
             "busuk buah" -> penanganan = busukBuah
             "kanker bercak" -> penanganan = kankerBercak
         }
