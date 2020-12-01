@@ -36,7 +36,7 @@ object Utils {
             "kutu loncat"-> penanganan = kutuLoncat
             "lebah mini"-> penanganan = lebahMini
             "penggerek buah"-> penanganan = penggerekBuah
-            "embug/engkuk"-> penanganan = embug
+            "embug"-> penanganan = embug
             "ulat penggerek bunga"-> penanganan = ulatPenggerekBunga
             "ulat daun"-> penanganan = ulatDaun
             "rayap"-> penanganan = rayap

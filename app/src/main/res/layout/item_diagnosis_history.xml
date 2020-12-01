@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/layout_margin3"
                     android:textColor="@color/text_gray"
-                    android:text="Gejala yang dipilih : " />
+                    android:text="@string/gejala_yang_dipilih" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/subtitle1"
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/layout_margin3"
                     android:textColor="@color/text_gray"
-                    android:text="Nilai Keyakinan :" />
+                    android:text="@string/nilai_keyakinan" />
 
                 <com.google.android.material.textview.MaterialTextView
                     style="@style/subtitle1"
@@ -72,15 +72,6 @@
                     android:text="@{String.valueOf(diagnosis.cfMax) + ` %`}"
                     android:textColor="@color/text_gray"
                     tools:text="70.44 %" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    style="@style/subtitle1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{Utils.INSTANCE.getGejalaDanCaraPenanganan(diagnosis.classificationResultMax)}"
-                    android:textColor="@color/text_gray"
-                    android:maxLines="2"
-                    tools:text="Gejala dan Cara Penanganan" />
 
             </LinearLayout>
 

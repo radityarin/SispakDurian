@@ -35,7 +35,7 @@ class SistemPakarDurian(object):
             perkalian_likelihood = {}
             for gejala in likelihood_dict.keys():
                   value = likelihood_dict.get(gejala)
-                  if(gejala in ['G1', 'G2', 'G7', 'G13']):
+                  if(gejala in input_gejala):
                         if(index == 0):
                               perkalian_likelihood = value
                         else:
@@ -653,9 +653,6 @@ class SistemPakarDurian(object):
                   cf_pakar_min.append(cf_klasifikasi_min.get(index))
 
             for cf in range(len(cf_pakar_max)):
-                  # print(cf_pakar_max)
-                  # print(input_cf)
-                  # print(cf)
                   cf_gejala_max.append(cf_pakar_max[cf]*input_cf[cf])
                   cf_gejala_min.append(cf_pakar_min[cf]*input_cf[cf])
 
