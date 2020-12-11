@@ -87,13 +87,13 @@ class DiagnosisFragment : Fragment() {
                 )
                 listGejala.add(Symptomp("Rusaknya benang sari dan tajuk bunga", "0"))
                 listGejala.add(Symptomp("Kuncup dan putik patah karena luka digerek", "0"))
+                listGejala.add(Symptomp("Daun berlubang", "0"))
                 listGejala.add(
                     Symptomp(
                         "Adanya alur dari tanah yang menempel di bagian batang",
                         "0"
                     )
                 )
-                listGejala.add(Symptomp("Daun berlubang", "0"))
                 listGejala.add(Symptomp("Kulit dan duri buah menjadi hitam seperti busuk", "0"))
                 listGejala.add(Symptomp("Buah jatuh sebelum tua", "0"))
             }
